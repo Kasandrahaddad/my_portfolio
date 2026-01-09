@@ -1,0 +1,154 @@
+:root {
+    --primary-purple: #a855f7;
+    --primary-purple-light: #c084fc;
+    --dark-text: #1e293b;
+    --light-text: #f8fafc;
+    --glass-white: rgba(255, 255, 255, 0.5);
+    --card-white: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === تثبيت الصفحة === */
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: url('bc.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* === Glass Card مثل Reflections === */
+.glass-card {
+    width: 90%;
+    max-width: 1200px;
+    background: var(--glass-white);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.full-width-card {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--dark-text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.navbar a.active {
+    background: var(--primary-purple);
+    color: var(--light-text);
+}
+
+/* === Scroll Area === */
+.scroll-area {
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Assignment Content */
+.assignment-content {
+    padding: 20px;
+}
+
+.assignment-title {
+    color: var(--dark-text);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* File List */
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.file-card:hover {
+    transform: translateX(5px);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.file-icon {
+    font-size: 1.5rem;
+}
+
+.file-icon.pdf { color: #f44336; }
+.file-icon.word { color: #2196f3; }
+
+.file-name {
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+/* View Button */
+.view-btn {
+    background: var(--primary-purple);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-btn:hover {
+    background: var(--primary-purple-light);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .file-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .view-btn {
+        align-self: flex-end;
+    }
+}

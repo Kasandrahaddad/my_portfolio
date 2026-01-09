@@ -1,0 +1,131 @@
+.full-width-card {
+    max-width: 1200px;
+    width: 95%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* Lecture Card */
+.lecture-card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 15px 10px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.lecture-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.lecture-card h3 {
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* View Button */
+.open-btn {
+    background: var(--primary-purple-light);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.open-btn:hover {
+    background: var(--primary-purple);
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-box {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: scaleIn 0.3s ease;
+}
+
+.modal-box h3 {
+    color: var(--primary-purple);
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--primary-purple);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Animation */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .reflection-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .reflection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

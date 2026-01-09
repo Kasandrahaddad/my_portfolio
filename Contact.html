@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Center the content vertically inside the card */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            height: 60vh;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            padding: 15px 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-bar:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
+            border-color: #fff;
+        }
+
+        /* Icon Circle */
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .phone-icon {
+            background: linear-gradient(135deg, #c084fc, #9333ea);
+        }
+
+        .email-icon {
+            background: linear-gradient(135deg, #a855f7, #7e22ce);
+        }
+
+        .linkedin-icon {
+            background: linear-gradient(135deg, #0077b5, #005582);
+        }
+
+        .contact-text {
+            font-size: 1.4rem;
+            color: #1e293b;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .contact-bar {
+                flex-direction: column;
+                padding: 20px;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .contact-text {
+                font-size: 1.1rem;
+                word-break: break-all;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="glass-card">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="assignment.html">Assignments</a></li>
+            <li><a href="Activities.html">Activities</a></li>
+            <li><a href="Reflection.html">Reflections</a></li>
+            <li><a href="Favorite.html">Favorite Websites</a></li>
+            <li><a href="Contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+
+        <!-- Phone -->
+        <a href="tel:0772591556" class="contact-bar">
+            <div class="icon-circle phone-icon">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+            <span class="contact-text">0772591556</span>
+        </a>
+
+        <!-- Email (Gmail Web - New Tab) -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Kasandrahaddad9@gmail.com"
+           target="_blank" class="contact-bar">
+            <div class="icon-circle email-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <span class="contact-text">Kasandrahaddad9@gmail.com</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/kasandra-haddad-072382261"
+           target="_blank" class="contact-bar">
+            <div class="icon-circle linkedin-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="contact-text">Kasandra Haddad</span>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>

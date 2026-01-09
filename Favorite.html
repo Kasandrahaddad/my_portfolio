@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Websites</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* نفس فكرة Reflections */
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .full-width-card {
+            max-width: 1200px;
+            width: 95%;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .website-card {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
+            transition: 0.3s ease;
+        }
+
+        .website-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .brand-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+            color: white;
+        }
+
+        .icon-openai { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+        .icon-coursera { background: linear-gradient(135deg, #2563eb, #1e40af); }
+        .icon-scholar { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+        .icon-kaggle { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+
+        .website-card h2 {
+            font-size: 1.4rem;
+            color: var(--dark-text);
+            margin: 0;
+        }
+
+        .website-card p {
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .visit-btn {
+            background: var(--primary-purple-light);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .visit-btn:hover {
+            background: var(--primary-purple);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .websites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="glass-card full-width-card">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assignment.html">Assignments</a></li>
+            <li><a href="Activities.html">Activities</a></li>
+            <li><a href="Reflection.html">Reflections</a></li>
+            <li><a href="Favorite.html" class="active">Favorite Websites</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- المحتوى القابل للسكرول -->
+    <div class="websites-grid">
+
+        <div class="website-card">
+            <div>
+                <div class="card-header">
+                    <div class="brand-icon icon-openai">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h2>OpenAI</h2>
+                </div>
+                <p><strong> intelligence research organization developing advanced AI models and tools.</strong></p>
+            </div>
+            <a href="https://openai.com" target="_blank" class="visit-btn">Visit</a>
+        </div>
+
+        <div class="website-card">
+            <div>
+                <div class="card-header">
+                    <div class="brand-icon icon-coursera">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h2>Coursera</h2>
+                </div>
+                <p><strong>learning platform offering AI, data science, and technology courses.</strong> </p>
+            </div>
+            <a href="https://www.coursera.org" target="_blank" class="visit-btn">Visit</a>
+        </div>
+
+        <div class="website-card">
+            <div>
+                <div class="card-header">
+                    <div class="brand-icon icon-scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>Google Scholar</h2>
+                </div>
+                <p><strong> search engine for research papers and scientific studies.</strong></p>
+            </div>
+            <a href="https://scholar.google.com" target="_blank" class="visit-btn">Visit</a>
+        </div>
+
+        <div class="website-card">
+            <div>
+                <div class="card-header">
+                    <div class="brand-icon icon-kaggle">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h2>Kaggle</h2>
+                </div>
+                <p><strong> science and machine learning platform with datasets and competitions.</strong></p>
+            </div>
+            <a href="https://www.kaggle.com" target="_blank" class="visit-btn">Visit</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
