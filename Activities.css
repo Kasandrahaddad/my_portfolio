@@ -17,6 +17,7 @@
 body {
     height: 100vh;
     overflow: hidden;
+    background-color: #f1f5f9; /* إضافة لون خلفية خفيف */
 }
 
 /* ================= Glass Card ================= */
@@ -27,6 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.8); /* تحسين شفافية الخلفية */
+    border-radius: 15px; /* إضافة حواف دائرية */
 }
 
 /* السكرول فقط داخل محتوى الأنشطة */
@@ -145,10 +148,14 @@ body {
 
 /* ================= Video Card ================= */
 .video-card {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px; /* تأكيد وجود مساحة كافية */
 }
 
 .video-card h3 {
@@ -164,12 +171,34 @@ body {
     overflow: hidden;
     background: #000;
     aspect-ratio: 16 / 9;
+    position: relative;
 }
 
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* تعديل الزر ليكون في الأسفل أو المنتصف */
+.video-play-button {
+    background-color: var(--primary-purple); /* اللون البنفسجي */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; /* تحديد مكان الزر في الأسفل */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.video-play-button i {
+    margin-right: 8px; /* إضافة مسافة بين الأيقونة والنص */
+}
+
+.video-play-button:hover {
+    background-color: var(--primary-purple-light);
 }
 
 /* ================= Responsive ================= */
@@ -179,6 +208,12 @@ video {
     }
 
     .activity-card {
-        flex-direction: row;
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي في الأجهزة الصغيرة */
+    }
+    
+    /* تحسين عرض الزر في الشاشات الصغيرة */
+    .video-play-button {
+        width: 100%; /* جعل الزر يملأ المساحة في الأجهزة الصغيرة */
+        padding: 15px;
     }
 }
